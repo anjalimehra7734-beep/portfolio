@@ -20,7 +20,7 @@ export default function AboutImage() {
 
         <div className="relative h-full w-full overflow-hidden rounded-[30px]">
           <Image
-            src="/profile.jpeg"
+            src="/about.jpeg"
             alt="Anjali Mehra"
             fill
             priority
