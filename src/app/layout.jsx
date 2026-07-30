@@ -1,5 +1,9 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import LoadingScreen from "@/components/loading/LoadingScreen";
+import ScrollProgress from "@/components/common/ScrollProgress";
+
+import MouseGlow from "@/components/common/MouseGlow";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,7 +26,14 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body>
+        
+        <ScrollProgress />
+        <LoadingScreen />
+        
+          <MouseGlow />
+        {children}
+        </body>
     </html>
   );
 }
